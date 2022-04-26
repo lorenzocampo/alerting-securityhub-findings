@@ -18,7 +18,7 @@ Terraform code that creates a solution that sends an email when an Amazon GuardD
 [IAM Role]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
 [SES Identity]: https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html
 
-![HLA](https://github.com/tograh/testrepository/3DTest.png)
+![HLA](https://github.com/lorenzocampo/alerting-securityhub-findings/blob/main/images/HLA_SecurityHub_Alerting.JPG)
 
 ## How It Works
 
