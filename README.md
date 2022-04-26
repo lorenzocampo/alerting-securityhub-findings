@@ -30,7 +30,9 @@ Terraform code that creates a solution for sending emails with Security Hub Find
 
 ![HLA](https://github.com/lorenzocampo/alerting-securityhub-findings/blob/main/images/StepFunction_Workflow.JPG)
 
+3. If the Finding is new or if it has been active for more than 15 days, it sends an Email to Operations, extracting the most important attributes of the json event and formatting the email in HTML, to make it more human readable.
 
+4. Additionally, a lambda is run on a daily basis checking, for each item in the dynamodb table, whether it is still active in the security hub or not. If it is no longer active, it removes the item from the table.
 
 ## Usage
 
