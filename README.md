@@ -25,7 +25,7 @@ Terraform code that creates a solution for sending emails with Security Hub Find
 
 ## How It Works
 
-1. An Event Rule monitors Security Hub Findings. These Findings are filtered by source service. Currently this solution supports findings originated Security Hub (CIS and Foundational benchmarks), GuardDuty and Inspector.
+1. An Event Rule monitors Security Hub Findings. These Findings are filtered by source service. Currently this solution supports findings originated in Security Hub (CIS and Foundational benchmarks), GuardDuty and Inspector.
 2. When the Event Rule detects an Event it triggers a Step Function State Machine Workflow.
 
 3. If the Finding is new or if it has been active for more than 15 days, it sends an Email to Operations, extracting the most important attributes of the json event and formatting the email in HTML, to make it more human readable.
