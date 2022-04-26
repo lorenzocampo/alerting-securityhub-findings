@@ -1,6 +1,6 @@
 # Alerting AWS Security Hub Findings
 
-Terraform code that creates a solution that sends an email when an Amazon GuardDuty Finding is registered. It implements the following resources:
+Terraform code that creates a solution for sending emails with Security Hub Findings. It implements the following resources:
 
 * **[EventBridge Event Rule]** --> 2 Events Rule. One for monitoring Security Hub Findings and one for executing daily deletion of resolved findigns.
 * **[Step Function]** --> Serverless workflow for analyzing all the findings registered in Security Hub.
@@ -17,6 +17,9 @@ Terraform code that creates a solution that sends an email when an Amazon GuardD
 [Cloudwatch Log Group]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html
 [IAM Role]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
 [SES Identity]: https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html
+
+
+## High Level Architecture
 
 ![HLA](https://github.com/lorenzocampo/alerting-securityhub-findings/blob/main/images/HLA_SecurityHub_Alerting.JPG)
 
