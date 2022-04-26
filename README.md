@@ -33,7 +33,7 @@ Terraform code that creates a solution for sending emails with Security Hub Find
 4. Additionally, a lambda is run on a daily basis checking, for each item in the dynamodb table, whether it is still active in the security hub or not. If it is no longer active, it removes the item from the table.
 
  
-## Wwhy is this solution necessary?
+## Why is this solution necessary?
 
 Security Hub alerts for each finding of the services you have integrated but the same finding can be logged several times before being resolved so if you send an email to the support team for each finding, they will find duplicate findings so, to avoid spam, I have set up a workflow with step functions to alert only about findings that are not repeated and are active.
 
