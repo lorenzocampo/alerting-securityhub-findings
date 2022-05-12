@@ -72,7 +72,7 @@ resource "aws_cloudwatch_log_group" "StateMachine" {
 }
 
 resource "aws_sfn_state_machine" "sfn_state_machine" {
-  name     = "SHStateMachine"
+  name     = "${var.project}StateMachine"
   role_arn = aws_iam_role.SHStateMachine-Role.arn
   definition = <<EOF
 {
