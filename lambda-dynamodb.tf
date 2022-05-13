@@ -59,6 +59,7 @@ resource "aws_lambda_function" "DynamoDB" {
   handler       = "DynamoDB.lambda_handler"
   source_code_hash = filebase64sha256("lambdas-code/DynamoDB.zip")
   runtime = "python3.9"
+  timeout = "15"
   environment {
     variables = {
       dynamodb_tablename = var.dynamodb_table

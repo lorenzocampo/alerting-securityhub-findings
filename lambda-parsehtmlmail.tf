@@ -47,6 +47,7 @@ resource "aws_lambda_function" "ParseHtmlMail" {
   handler       = "ParseHtmlMail.lambda_handler"
   source_code_hash = filebase64sha256("lambdas-code/ParseHtmlMail.zip")
   runtime = "python3.9"
+  timeout = "15"
   environment {
     variables = {
       ses_emails_recipients = local.ses_emails_list

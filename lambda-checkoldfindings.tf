@@ -61,6 +61,7 @@ resource "aws_lambda_function" "CheckOldFindingsState" {
   handler       = "CheckOldFindingsState.lambda_handler"
   source_code_hash = filebase64sha256("lambdas-code/CheckOldFindingsState.zip")
   runtime = "python3.9"
+  timeout = "15"
   environment {
     variables = {
       dynamodb_tablename = var.dynamodb_table
