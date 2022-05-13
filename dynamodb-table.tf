@@ -5,6 +5,9 @@ resource "aws_dynamodb_table" "dynamodb_table" {
   billing_mode   = "PROVISIONED"
   read_capacity  = 30
   write_capacity = 30
+  point_in_time_recovery {
+        enabled = true
+  }
 
   attribute {
     name = "Resource"
